@@ -12,9 +12,9 @@ except socket.error, msg: # si es del tipo socket.error
 
 print "Socket created"
 
-host = "www.google.com"
+host = "localhost"
 # defina una variable port y almacene alli el numero 80
-port = 80 # COMPLETE (2)
+port = 8080 # COMPLETE (2)
 
 
 try:
@@ -35,7 +35,7 @@ s.connect(endpoint)
 print "Socket connected to " + host + " on ip " + remote_ip
 
 # Datos a enviarse
-message = "GET / HTTP/1.1\r\n\r\n"
+message = "GET / HTTP/1.1\r\nHost: " + host + "\r\n\r\n"
 
 try:
 	# COMPLETE (7)
